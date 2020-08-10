@@ -8,7 +8,7 @@ import { emailsvg, passwordsvg, loginsvg } from "./allsvg";
 import Button from "./Button";
 import Wrapper from "./Wrapper";
 
-const Login = ({ login, onLoginNameChange, onLoginPasswordChange }) => {
+const Login = ({ onLoginNameChange, onLoginPasswordChange }) => {
   const [{ username, password }] = login;
   const handelChange = e => {
     e.target.name === "username"
@@ -63,7 +63,6 @@ const Login = ({ login, onLoginNameChange, onLoginPasswordChange }) => {
     </>
   );
 };
-export default connect(
-  s => s,
+export default connect(null,
   { onLoginNameChange, onLoginPasswordChange }
 )(Login);
